@@ -1,5 +1,4 @@
-
-# JimmyB – BSC auto–trader TUI
+# JimmyBSC
 
 JimmyB is a TUI app for watching new BSC pairs and auto–trading them using simple rules.
 
@@ -7,7 +6,9 @@ It connects to:
 - PancakeSwap V2 / V3; and
 - FourMeme’s `TokenManagerHelper3`
 
-to simulate or execute buys and sells based on streaming on–chain data. You get:
+to simulate or execute buys and sells based on streaming on–chain data. 
+
+You get:
 
 - A live “Hermes” feed of new pairs and prices
 - A configurable auto–trade engine (per–pair buy amount, TP/SL, max positions, max hold, etc.)
