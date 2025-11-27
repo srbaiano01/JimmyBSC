@@ -1,3 +1,9 @@
+<div align="center">
+
+  <img alt="jimmy (1)" src="https://github.com/user-attachments/assets/fd9461f6-8333-4b90-9c7d-bcd8935b871b" />
+
+</div>
+
 # JimmyBSC
 
 JimmyB is a TUI app for watching new BSC pairs and auto–trading them using simple rules.
