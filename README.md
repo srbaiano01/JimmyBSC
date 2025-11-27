@@ -8,6 +8,9 @@
 
 JimmyB is a TUI app for watching new BSC pairs and auto–trading them using simple rules.
 
+> [!NOTE]
+> Provided software is **free**. One can distribute further under standard MIT license.
+
 **Tested for both Linux and Windows platforms.**
 
 It connects to:
