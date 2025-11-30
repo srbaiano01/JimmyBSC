@@ -6,7 +6,7 @@
 
 # JimmyBSC
 
-JimmyB is a TUI app for watching new BSC pairs and auto–trading them using simple rules.
+TUI app for watching new BSC pairs and auto–trading them using simple rules.
 
 > [!NOTE]
 > Provided software is **free**. One can distribute further under standard MIT license.
@@ -27,10 +27,6 @@ You get:
 - A small settings panel to hide UI blocks and flip between simulation and real mode
 
 The whole thing runs in a single terminal window and logs to disk so you can replay sessions later.
-
----
-
-## Screenshots
 
 ### Home (Hermes feed)
 
@@ -55,33 +51,6 @@ The whole thing runs in a single terminal window and logs to disk so you can rep
 `Settings` is a small panel for cosmetic and safety preferences (wallet block, runtime block, sim mode).
 
 ![Settings](media/settings.png)
-
----
-
-## How it works (high level)
-
-At a very high level:
-
-- WebSocket clients subscribe to:
-  - Pancake V2 `PairCreated`
-  - Pancake V3 `PoolCreated`
-  - FourMeme token creation events
-- A `SimEngine` tracks positions in memory:
-  - Entry price, current price, PnL, remaining size, duration, liquidity and “frozen / out–of–liq” flags.
-- The Home tab (“Hermes”) continuously updates pairs with live prices and metadata.
-- The Auto Trade logic decides when to open a new position based on:
-  - Buy count / popularity
-  - Minimum liquidity
-  - Config thresholds (TP, SL, max positions, max hold, etc.)
-- Depending on the mode:
-  - **Simulation ON**: trades only touch the `SimEngine` and logs – nothing on–chain.
-  - **Simulation OFF**: trades call Pancake / FourMeme routers using your configured wallet.
-- The Results tab renders a summary of open / closed positions and gives you clickable actions:
-  - Take (full close), 10/25/50% partials, Freeze / Unfreeze, Remove.
-
-All of this is wired through the TUI in `src/app/handler.rs`, backed by various helpers in `src/libs`.
-
----
 
 ## Features
 
@@ -109,7 +78,6 @@ All of this is wired through the TUI in `src/app/handler.rs`, backed by various 
   - Auto trade config cached in `.cache/autotrade.json`.
   - UI preferences cached in `.cache/settings.json`.
   - Env–based connection config (`BSC_RPC`, `BSC_WSS`, `PRIVATE_KEY`).
-
 ---
 
 ## Requirements
@@ -120,6 +88,40 @@ All of this is wired through the TUI in `src/app/handler.rs`, backed by various 
 - A funded BSC wallet private key (for **real trading**)
 
 You can still run in simulation mode with a dummy key, but a real key is required if you flip sim mode off.
+
+---
+
+## Building and running
+
+Clone the repo and build:
+
+```bash
+git clone <this-repo-url>
+cd JimmyBSC
+cargo build --release
+```
+
+Set up your `.env`:
+
+```bash
+cp .env.example .env   # if you have one, otherwise create it
+```
+
+Fill in at least:
+
+```bash
+BSC_WSS=wss://your-bsc-websocket
+BSC_RPC=https://your-bsc-rpc
+PRIVATE_KEY=0xYourPrivateKey
+```
+
+Then run:
+
+```bash
+cargo run --release
+```
+
+Logs will be written to `logs/` (e.g. `logs/logs_00-27-11-2025.txt` and `pancakes.log`).
 
 ---
 
@@ -185,50 +187,6 @@ These are stored in `.cache/settings.json`. On startup:
 - `sim_mode` is **forced to true at startup**, and then persisted, so you always boot in simulation mode even if you last shut down in real mode.
 
 ---
-
-## Building and running
-
-Clone the repo and build:
-
-```bash
-git clone <this-repo-url>
-cd JimmyBSC
-cargo build --release
-```
-
-Set up your `.env`:
-
-```bash
-cp .env.example .env   # if you have one, otherwise create it
-```
-
-Fill in at least:
-
-```bash
-BSC_WSS=wss://your-bsc-websocket
-BSC_RPC=https://your-bsc-rpc
-PRIVATE_KEY=0xYourPrivateKey
-```
-
-Then run:
-
-```bash
-cargo run --release
-```
-
-If everything is wired correctly, you should see:
-
-- The TUI switch to the alternate screen.
-- Wallet / runtime info at the top left.
-- Hermes feed populating on the Home tab as new pairs appear.
-
-Logs will be written to `logs/` (e.g. `logs/logs_00-27-11-2025.txt` and `pancakes.log`).
-
----
-
-## TUI layout and navigation
-
-JimmyB runs inside a single terminal window using `ratatui` + `crossterm`.
 
 ### Global navigation
 
