@@ -104,12 +104,6 @@ cargo build --release
 Set up your `.env`:
 
 ```bash
-cp .env.example .env   # if you have one, otherwise create it
-```
-
-Fill in at least:
-
-```bash
 BSC_WSS=wss://your-bsc-websocket
 BSC_RPC=https://your-bsc-rpc
 PRIVATE_KEY=0xYourPrivateKey
